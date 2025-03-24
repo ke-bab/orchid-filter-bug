@@ -31,6 +31,10 @@ use Tabuna\Breadcrumbs\Trail;
 |
 */
 
+Route::screen('/filter-example', \App\Orchid\Screens\FilterExample::class)
+    ->name('platform.filter-example');
+
+
 // Main
 Route::screen('/main', PlatformScreen::class)
     ->name('platform.main');
