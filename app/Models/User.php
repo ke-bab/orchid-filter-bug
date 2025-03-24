@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\Orchid\Filters\IsPrivateFilter;
+use App\Orchid\Filters\ShowFilter;
 use Orchid\Filters\Filterable;
 use Orchid\Filters\Types\Like;
 use Orchid\Filters\Types\Where;
@@ -60,8 +62,8 @@ class User extends Authenticatable
         'id' => Where::class,
         'name' => Like::class,
         'email' => Like::class,
-        'is_private' => Like::class,
-        'show' => Like::class,
+        'is_private' => IsPrivateFilter::class,
+        'show' => ShowFilter::class,
         'updated_at' => WhereDateStartEnd::class,
         'created_at' => WhereDateStartEnd::class,
     ];
