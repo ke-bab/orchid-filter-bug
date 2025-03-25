@@ -56,6 +56,7 @@ class FilterExample extends Screen
 
                 TD::make('is_private', 'Private')
                     ->filter(Select::make()
+                        ->empty()
                         ->options([
                             'yes' => 'Yes',
                             'no' => 'No',
@@ -65,6 +66,7 @@ class FilterExample extends Screen
 
                 TD::make('show', 'Show')
                     ->filter(Select::make()
+                        ->empty()
                         ->options([
                             'yes' => 'Yes',
                             'no' => 'No',
